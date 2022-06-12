@@ -7,7 +7,7 @@ class Person {
 
   whatIsInBinary (number) { return Number("0b" + number); };
 
-  log (number) {
+  read (number) {
     if (this.typeOfPerson === "binary knower") {
       return this.whatIsInBinary(number);
     } else {

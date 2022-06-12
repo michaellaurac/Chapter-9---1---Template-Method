@@ -18,9 +18,9 @@ describe("tests run on the 'template_method.js' file:", () => {
   const personTwo = new Person("binary oblivious");
   // functional tests
   it("checks that '10' is understood as '2' for a binary knower", () => {
-    wish(personOne.log(10) === 2);
+    wish(personOne.read(10) === 2);
   });
   it("checks that '10' is understood as '10' for a binary oblivious", () => {
-    wish(personTwo.log(10) === 10);
+    wish(personTwo.read(10) === 10);
   });
 });
