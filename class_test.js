@@ -9,7 +9,7 @@ const wish = require("wish");
 const Class = require("./class.js");
 
 describe("tests run on the 'class.js' file:", () => {
-  // has the right setup
+  // setup test
   it("verifies the test file name", () => {
     wish(fileName() === "class_test.js");
   });
