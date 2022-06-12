@@ -1,19 +1,19 @@
-class Person {
-  constructor (typeOfPerson) {
-    this.typeOfPerson = typeOfPerson;
-  };
+class Person {}
 
-  whatIs (number) { return number; };
-
+class BinaryKnower extends Person {
   whatIsInBinary (number) { return Number("0b" + number); };
 
   read (number) {
-    if (this.typeOfPerson === "binary knower") {
-      return this.whatIsInBinary(number);
-    } else {
-      return this.whatIs(number);
-    }
+    return this.whatIsInBinary(number);
   };
 };
 
-module.exports = Person;
+class BinaryOblivious extends Person {
+  whatIs (number) { return number; };
+
+  read (number) {
+    return this.whatIs(number);
+  };
+};
+
+module.exports = { BinaryKnower, BinaryOblivious };
