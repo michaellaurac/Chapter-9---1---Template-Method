@@ -1,19 +1,15 @@
-class Person {}
+class Person {
+  read (number) {
+    return this.whatIs(number);
+  };
+}
 
 class BinaryKnower extends Person {
-  whatIsInBinary (number) { return Number("0b" + number); };
-
-  read (number) {
-    return this.whatIsInBinary(number);
-  };
+  whatIs (number) { return Number("0b" + number); };
 };
 
 class BinaryOblivious extends Person {
   whatIs (number) { return number; };
-
-  read (number) {
-    return this.whatIs(number);
-  };
 };
 
 module.exports = { BinaryKnower, BinaryOblivious };

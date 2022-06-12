@@ -9,7 +9,7 @@ const wish = require("wish");
 const { BinaryKnower, BinaryOblivious } = require("./template_method.js");
 
 describe("tests run on the 'template_method.js' file:", () => {
-  // has the right setup
+  // setup
   it("verifies the test file name", () => {
     wish(fileName() === "template_method_test.js");
   });
