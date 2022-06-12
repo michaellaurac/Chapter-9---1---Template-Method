@@ -14,5 +14,14 @@ describe("tests run on the 'template_method.js' file:", () => {
     wish(fileName() === "template_method_test.js");
   });
   // functional tests
-  console.log(Person);
+  const personOne = new Person(true);
+  const personTwo = new Person(false);
+
+  [personOne, personTwo].forEach(person => {
+    if (person.binaryKnower) {
+      console.log(person.whatIsInBinary(10));
+    } else {
+      console.log(person.whatIs(10));
+    }
+  });
 });
